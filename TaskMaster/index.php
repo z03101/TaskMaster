@@ -48,21 +48,22 @@
       </div>
     </div>
   </div>
-
+    
   <div class="logreg-box">
       <div class="form-box login">
-          <form action="#">
+        
+          <form action="login.php" method="post">
             <h2>Sign In</h2>
 
             <div class="input-box">
                 <span class="icon"><i class='bx bx-envelope'></i></span>
-                <input type="email" required>
+                <input type="email" id="email" name="email" required>
                 <label>Email</label>
             </div>
 
             <div class="input-box">
               <span class="icon"><i class='bx bxs-lock'></i></span>
-              <input type="password" 
+              <input type="password" id="password" name="password" 
               required>
               <label>Password</label>
             </div>
@@ -87,7 +88,7 @@
 
 
       <div class="form-box register">
-        <form action="process-signup.php" method="post">
+        <form action="signup.php" method="post">
           <h2>Sign up</h2>
 
           <div class="input-box">
@@ -115,8 +116,7 @@
               
           </div>
 
-          <button type="submit"
-          class="btn">Sign Up</button>
+          <button type="submit" class="btn">Sign Up</button>
 
           <div class="login-register">
             <p>Already have an account? <a
@@ -127,7 +127,7 @@
         </form>
     </div>
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 
