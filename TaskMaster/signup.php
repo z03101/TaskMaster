@@ -1,31 +1,17 @@
 <?php
-// Check if the 'name' field is set in the form submission
-if(isset($_POST['name'])) {
+// Check if the 'name', 'email', and 'password' fields are set in the form submission
+if(isset($_POST['name'], $_POST['email'], $_POST['password'])) {
     $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 } else {
-    // Handle the case when 'name' is not set or empty
-    echo "Name field is required.";
+    // Handle the case when any of the required fields are not set or empty
+    echo "All fields are required.";
     exit(); // Stop further execution
 }
 
-// Similarly, check and retrieve other fields like 'email' and 'password'
-if(isset($_POST['email'])) {
-    $email = $_POST['email'];
-} else {
-    echo "Email field is required.";
-    exit();
-}
-
-if(isset($_POST['password'])) {
-    $password = $_POST['password'];
-} else {
-    echo "Password field is required.";
-    exit();
-}
-
-// Database connection
-
-$mysqli = require __DIR__ . "/database.php";
+// Include the database connection
+require __DIR__ . "/database.php";
 
 $conn = new mysqli('localhost', 'root', '', 'signup_db');
 if ($conn->connect_error) {
