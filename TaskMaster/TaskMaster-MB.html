@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="calendar, events, reminders, javascript, html, css, open source coding"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="TM-style.css" />
-    <title>Task Organizer</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="left">
-        <div class="calendar">
-          <div class="month">
-            <i class="fas fa-angle-left prev"></i>
-            <div class="date">August 2002</div>
-            <i class="fas fa-angle-right next"></i>
+<head>
+  <!-- Character set and compatibility settings -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Responsive viewport settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page keywords for SEO -->
+  <meta name="keywords" content="calendar, events, reminders, javascript, html, css, open source coding" />
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="TM-style.css" />
+  <!-- Page title -->
+  <title>Task Organizer</title>
+</head>
+<body>
+  <!-- Main container -->
+  <div class="container">
+    <!-- Left side with calendar -->
+    <div class="left">
+      <!-- Calendar section -->
+      <div class="calendar">
+        <!-- Month navigation -->
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">August 2002</div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <!-- Weekdays -->
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <!-- Calendar days -->
+        <div class="days"></div>
+        <!-- Go to date section -->
+        <div class="goto-today">
+          <div class="goto">
+            <input type="text" placeholder="mm/yyyy" class="date-input" />
+            <button class="goto-btn">Go</button>
           </div>
-          <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-          </div>
-          <div class="days"></div>
-          <div class="goto-today">
-            <div class="goto">
-              <input type="text" placeholder="mm/yyyy" class="date-input" />
-              <button class="goto-btn">Go</button>
-            </div>
-            <button class="today-btn">Today</button>
-          </div>
+          <button class="today-btn">Today</button>
         </div>
       </div>
-      <div class="right">
-        <div class="today-date">
-          <div class="event-day">wed</div>
-          <div class="event-date">19th August 2022</div>
+    </div>
+    <!-- Right side with events -->
+    <div class="right">
+      <!-- Today's date and day -->
+      <div class="today-date">
+        <div class="event-day">Wed</div>
+        <div class="event-date">19th August 2022</div>
+      </div>
+      <!-- Event list -->
+      <div class="events"></div>
+      <!-- Add event section -->
+      <div class="add-event-wrapper">
+        <div class="add-event-header">
+          <div class="title">Add Event</div>
+          <i class="fas fa-times close"></i>
         </div>
-        <div class="events"></div>
-        <div class="add-event-wrapper">
-          <div class="add-event-header">
-            <div class="title">Add Event</div>
-            <i class="fas fa-times close"></i>
+        <div class="add-event-body">
+          <!-- Event name input -->
+          <div class="add-event-input">
+            <input type="text" placeholder="Event Name" class="event-name" />
           </div>
-          <div class="add-event-body">
-            <div class="add-event-input">
-              <input type="text" placeholder="Event Name" class="event-name" />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time From"
-                class="event-time-from"
-              />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time To"
-                class="event-time-to"
-              />
-            </div>
+          <!-- Event time from input -->
+          <div class="add-event-input">
+            <input type="text" placeholder="Event Time From" class="event-time-from" />
           </div>
-          <div class="add-event-footer">
-            <button class="add-event-btn">Add Event</button>
+          <!-- Event time to input -->
+          <div class="add-event-input">
+            <input type="text" placeholder="Event Time To" class="event-time-to" />
           </div>
+        </div>
+        <!-- Add event button -->
+        <div class="add-event-footer">
+          <button class="add-event-btn">Add Event</button>
         </div>
       </div>
-      <button class="add-event">
-        <i class="fas fa-plus"></i>
-      </button>
     </div>
-    <div class="form-box register">
-        <form action="logout.php" method="post">
-            <div class="top-right-corner">
-            <button>logout</button>
-            </div>
-        </from>
-    </div>
-
-    <script src="TM-script.js"></script>
-  </body>
+    <!-- Add event button -->
+    <button class="add-event">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+  <!-- Logout form -->
+  <div class="form-box register">
+    <form action="logout.php" method="post">
+      <!-- Logout button -->
+      <div class="top-right-corner">
+        <button>logout</button>
+      </div>
+    </form>
+  </div>
+  <!-- Custom JavaScript -->
+  <script src="TM-script.js"></script>
+</body>
 </html>

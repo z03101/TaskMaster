@@ -1,17 +1,16 @@
-
-
-*{
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
 
 body {
     background: rgba(47, 80, 47, 0.642);
 }
 
+/* Header Styles */
 header {
     position: fixed;
     top: 0;
@@ -27,15 +26,14 @@ header {
 
 .navbar a {
     position: relative;
-    font-size: 16xp;
+    font-size: 16px;
     color: azure;
     text-decoration: none;
     font-weight: 500;
     margin-right: 30px;
-
 }
 
-.navbar a::after{
+.navbar a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -49,13 +47,13 @@ header {
     transition: .5s;
 }
 
-.navbar a:hover:after{
+.navbar a:hover::after {
     transform: translateY(0);
     opacity: 1;
-
 }
 
-.search-bar{
+/* Search Bar Styles */
+.search-bar {
     width: 250px;
     height: 45px;
     background: transparent;
@@ -73,7 +71,6 @@ header {
     font-size: 16px;
     color: azure;
     padding-left: 10px;
-
 }
 
 .search-bar input::placeholder {
@@ -97,7 +94,8 @@ header {
     color: azure;
 }
 
-.background{
+/* Background Styles */
+.background {
     width: 100%;
     height: 118.9vh;
     background: url('istockphoto-117146059-612x612.jpg') no-repeat;
@@ -106,6 +104,7 @@ header {
     filter: blur(5px);
 }
 
+/* Container Styles */
 .container {
     position: absolute;
     top: 59%;
@@ -118,7 +117,6 @@ header {
     background-position: center;
     border-radius: 10px;
     margin-top: 20px;
-
 }
 
 .container .content {
@@ -133,7 +131,6 @@ header {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-
 }
 
 .container .logo {
@@ -145,7 +142,7 @@ header {
     line-height: 1;
 }
 
-.text-sci h2 span{
+.text-sci h2 span {
     font-size: 25px;
 }
 
@@ -159,15 +156,14 @@ header {
     color: azure;
     margin: 10px;
     transition: .5s ease;
-
 }
 
 .social-icons a:hover i {
     transform: scale(1.2);
 }
 
-
-.container .logreg-box {
+/* Login/Register Box Styles */
+.logreg-box {
     position: absolute;
     top: 0;
     right: 0;
@@ -191,7 +187,7 @@ header {
 }
 
 .logreg-box .form-box.login {
-    transform: translateX(0); 
+    transform: translateX(0);
     transition: transform .6s ease;
     transition-delay: .7s;
 }
@@ -235,7 +231,6 @@ header {
     color: rgba(47, 80, 47, 0.888);
     font-weight: 500;
     padding-right: 28px;
-
 }
 
 .input-box label {
@@ -252,7 +247,6 @@ header {
 .input-box input:focus~label,
 .input-box input:valid~label {
     top: -5px;
-
 }
 
 .input-box .icon {
@@ -260,7 +254,6 @@ header {
     top: 13px;
     right: 0;
     font-size: 19px;
-
 }
 
 .form-box .remember-forgot {
@@ -285,6 +278,7 @@ header {
     text-decoration: underline;
 }
 
+/* Button Styles */
 .btn {
     width: 100%;
     height: 45px;
@@ -299,6 +293,7 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
+/* Login/Register Text Styles */
 .form-box .login-register {
     font-size: 14.5px;
     font-weight: 500;
@@ -311,8 +306,7 @@ header {
     font-weight: 600;
     text-decoration: none;
 }
+
 .login-register p a:hover {
     text-decoration: underline;
 }
-
-
